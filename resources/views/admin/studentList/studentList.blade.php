@@ -10,6 +10,19 @@
         .table-row:hover {
             color:blue
         }
+
+        @media (max-width: 768px) {
+            .width-sm {
+                width: 80%;
+            }
+
+            .list-style-sm-none{
+                list-style: none;
+                font-size: 80%;
+            }
+        }
+
+
     </style>
 @endsection
 
@@ -204,17 +217,17 @@
                         <th colspan="4">
                             <div class="row" style="text-transform: none">
                                 <div class="text-center col-4">
-                                    <img src="{{ asset('storage/students/${student.profile}') }}" class="" height="100px" alt="">
+                                    <img src="{{ asset('storage/students/${student.profile}') }}" class="width-sm" height="100px" alt="">
                                 </div>
                                 <div class="row col-8">
-                                    <ul class="col-6">
+                                    <ul class="col-6 list-style-sm-none">
                                         <li>Name : ${student.name}</li>
                                         <li>Email : ${student.email}</li>
                                         <li>Phone : ${student.phone}</li>
                                         <li>Gender : ${student.gender}</li>
                                         <li>Age : ${student.age}</li>
                                     </ul>
-                                    <ul class="col-6">
+                                    <ul class="col-6 list-style-sm-none">
                                         <li>Education : ${student.education}</li>
                                         <li>Courses Id :`;
 

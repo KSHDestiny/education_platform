@@ -21,7 +21,7 @@
 						</div>
 						<div class="content">
 							<div class="inner">
-								<h1>Education Platform</h1>
+								<a href="{{ route('home') }}" class="image" style="font-size: 50px">Education Platform</a>
 								<p>Welcome to our education platform! Our website is designed to provide you with a comprehensive and engaging learning experience, whether you're a student looking to expand your knowledge or a teacher seeking new resources for your classroom</p>
 							</div>
 						</div>

@@ -125,7 +125,7 @@
                                     </h6>
                                     <span>Student's name - <b class="text-success">{{ $assignment->name }}</b></span>
                                     <div>
-                                        Assignment - {{ $assignment->assignment_no }} <br><a href="{{ $assignment->assignment_link }}"><span style="font-size: 15px">{{ $assignment->assignment_link }}</span></a>
+                                        Assignment - {{ $assignment->assignment_no }} <br><a href="{{ $assignment->assignment_link }}" target="_blank"><span style="font-size: 15px">{{ $assignment->assignment_link }}</span></a>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-12">

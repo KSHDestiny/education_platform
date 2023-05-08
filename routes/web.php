@@ -11,10 +11,14 @@ use App\Http\Controllers\Api\DiscussionController;
 use App\Http\Controllers\Student\EnrollController;
 use App\Http\Controllers\Student\StudentController;
 use App\Http\Controllers\Admin\StudentListController;
+use App\Http\Controllers\IntroductionController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
+
+Route::get('/intro/dashboard',[IntroductionController::class,'home'])->name('home');
+
 
 Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])->group(function () {
 

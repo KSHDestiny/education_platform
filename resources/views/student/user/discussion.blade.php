@@ -114,7 +114,7 @@
                                 <a href="{{ route('discussionPage',[$course->chat_id]) }}" class="list-group-item list-group-item-action col-6">
                                     <div class="text-center position-relative">
                                         <img src="{{ asset('storage/courseImages/'.$course->course_image) }}" alt="" class="img-size">
-                                        <div class="position-absolute bottom-0 start-50 translate-middle-x">
+                                        <div class="position-absolute bottom-0 start-50 translate-middle-x col-3 offset-3 col-sm-3 offset-sm-2 col-md-3 offset-md-3 col-lg-4 offset-lg-4">
                                             <img src="{{ asset('storage/'.$course->profile) }}" alt="" class="prof-img-size rounded-circle">
                                         </div>
                                     </div>

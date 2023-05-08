@@ -151,7 +151,7 @@
                         </div>
                         <div class="field">
                             <label for="description">Description</label>
-                            <textarea name="description" id="description" value="{{ old('description') }}" rows="5"></textarea>
+                            <textarea name="description" id="description" rows="5">{{ old('description') }}</textarea>
                             @error('description')
                                 <p class="text-danger">{{ $message }}</p>
                             @enderror
@@ -178,10 +178,10 @@
                 <section>
                     <h3>Social</h3>
                     <ul class="icons alt">
-                        <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-                        <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-                        <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-                        <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="https://www.twitter.com" target="_blank" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+                        <li><a href="https://www.facebook.com" target="_blank" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+                        <li><a href="https://www.instagram.com" target="_blank" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="https://www.github.com" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
                     </ul>
                 </section>
             </section>
