@@ -15,6 +15,8 @@ class IntroductionController extends Controller
 
         if(isset(Auth::user()->id) && Auth::user()->role == 'student'){
             return redirect()->route('student#dashboard');
+        } elseif(isset(Auth::user()->id) && Auth::user()->role != 'student'){
+            return redirect()->route('admin#dashboard');
         }
 
         $courses = Course::select('courses.*','users.name as professor_name','categories.title as category_title')
@@ -30,3 +32,4 @@ class IntroductionController extends Controller
         return view('notLogIn.dashboard',compact('courses','courseRatings'));
     }
 }
+
