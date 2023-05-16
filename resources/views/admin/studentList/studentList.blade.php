@@ -52,13 +52,13 @@
 
                 </tr>
                 <tr>
-                    <th class="col-2">
+                    <th class="col-3">
                         <select name="studentOption" id="studentOption" class="form-select">
                             <option value="all" selected>All</option>
                             <option value="myStudents">My Students</option>
                         </select>
                     </th>
-                    <th class="col-2"></th>
+                    <th class="col-1"></th>
                     <th colspan="2" class="col-8">
                         <div class="d-flex">
                             <input type="text" id="searchKey" placeholder="Search...">

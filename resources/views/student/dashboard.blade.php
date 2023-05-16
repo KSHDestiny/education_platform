@@ -81,7 +81,7 @@
         </div>
         <h2>All Courses</h2>
         <div class="">
-            <img src="{{ asset('asset/loading.gif') }}" id="loading">
+            <img src="{{ asset('asset/loading.gif') }}" id="loading" width="100%">
         </div>
         <div id="courses">
             @if (count($courses) < 1)

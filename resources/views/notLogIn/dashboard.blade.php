@@ -153,7 +153,7 @@
                     </div>
                     <h2>All Courses</h2>
                     <div class="">
-                        <img src="{{ asset('asset/loading.gif') }}" id="loading">
+                        <img src="{{ asset('asset/loading.gif') }}" id="loading" width="100%">
                     </div>
                     <div id="courses">
                         @if (count($courses) < 1)
@@ -161,7 +161,7 @@
                         @else
                             <div id="coursesField" class="row">
                                 @foreach ($courses as $course)
-                                    <article class="col-6 col-12-xsmall work-item">
+                                    <article class="ccol-md-6 col-sm-12 work-item">
                                         <a href="{{ asset('storage/courseImages/'.$course->course_image) }}" class="image fit thumb"><img src="{{ asset('storage/courseImages/'.$course->course_image) }}" alt="" width="300px" height="200px" /></a>
                                         <h3>{{ $course->course_title }}</h3>
                                         <h6>({{ $course->category_title }} course)</h6>
@@ -343,7 +343,7 @@
 
 
                                             courses += `
-                                            <article class="col-6 col-12-xsmall work-item">
+                                            <article class="col-md-6 col-sm-12 work-item">
                                                 <a href="{{ asset('storage/courseImages/${course.course_image}') }}" class="image fit thumb"><img src="{{ asset('storage/courseImages/${course.course_image}') }}" alt="" width="300px" height="200px" /></a>
                                                 <h3>${course.course_title}</h3>
                                                 <h6>(${course.category_title} course)</h6>
