@@ -54,7 +54,7 @@ class CourseController extends Controller
             "course_title" => $request->courseTitle,
             "course_content" => $request->courseContent,
             "difficulty" => $request->difficulty,
-            "assignment" => $request->assignment,
+            "assignment" => abs($request->assignment),
             "created_at" => Carbon::now(),
             "updated_at" => Carbon::now()
         ];
@@ -93,7 +93,7 @@ class CourseController extends Controller
             "course_title" => $request->courseTitle,
             "course_content" => $request->courseContent,
             "difficulty" => $request->difficulty,
-            "assignment" => $request->assignment,
+            "assignment" => abs($request->assignment),
             "updated_at" => Carbon::now(),
         ];
 

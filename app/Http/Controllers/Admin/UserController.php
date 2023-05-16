@@ -34,7 +34,7 @@ class UserController extends Controller
             'email' => $request->email,
             'description' => $request->description,
             'gender' => $request->gender,
-            'age' => $request->age,
+            'age' => abs($request->age),
             'phone' => $request->phone,
             'education' => $request->education,
             'updated_at' => Carbon::now()
@@ -93,7 +93,7 @@ class UserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'gender' => $request->gender,
-            'age' => $request->age,
+            'age' => abs($request->age),
             'phone' => $request->phone,
             'education' => $request->education,
             'description' => $request->description,

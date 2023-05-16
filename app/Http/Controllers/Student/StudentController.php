@@ -47,7 +47,7 @@ class StudentController extends Controller
         $data = [
             'name' => $request->name,
             'description' => $request->description,
-            'age' => $request->age,
+            'age' => abs($request->age),
             'gender' => $request->gender,
             'phone' => $request->phone,
             'education' => $request->education,
