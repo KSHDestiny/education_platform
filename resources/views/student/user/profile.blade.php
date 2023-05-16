@@ -80,7 +80,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="age" class="fa-fade h6 text-green">Age</label>
-                        <input type="number" class="border-green form-control" name="age" class="border-green form-control" value="{{ old('age',Auth::user()->age) }}" id="age" placeholder="Enter your age ..." min="0" />
+                        <input type="number" class="border-green form-control" name="age" class="border-green form-control" value="{{ old('age',Auth::user()->age) }}" id="age" placeholder="Enter your age ..." />
                         @error('age')
                             <p class="text-danger">{{ $message }}</p>
                         @enderror

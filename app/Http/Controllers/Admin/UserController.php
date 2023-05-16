@@ -181,10 +181,11 @@ class UserController extends Controller
             'name' => 'required',
             'email' => 'required|unique:users,email,'.$request->id,
             'education' => 'required',
+            'age' => 'gt:0|max:2',
             'description' => 'required',
             'profile' => 'mimes:png,jpg,jpeg,webp|file'
         ];
-        Validator::make($request->all(),$validationRules)->validate();
+        Validator::make($request->all(),$validationRules,['age.max' => "Age must not exceed 99 years",'age.gt' => "Age must be positive number."])->validate();
     }
 
     // professor validation
@@ -194,6 +195,7 @@ class UserController extends Controller
                 'name' => 'required',
                 'email' => 'required|unique:users,email',
                 'education' => 'required',
+                'age' => 'gt:0|max:2',
                 'password' => 'required',
                 'confirm_password' => 'required|same:password',
                 'description' => 'required',
@@ -204,11 +206,12 @@ class UserController extends Controller
                 'email' => 'required|unique:users,email,'.$request->id,
                 'gender' => 'required',
                 'education' => 'required',
+                'age' => 'gt:0|max:2',
                 'description' => 'required',
                 'profile' => 'mimes:png,jpg,jpeg,webp|file'
             ];
         }
-        Validator::make($request->all(),$validationRules)->validate();
+        Validator::make($request->all(),$validationRules,['age.max' => "Age must not exceed 99 years",'age.gt' => "Age must be positive number."])->validate();
     }
 
     // change password validation

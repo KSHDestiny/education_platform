@@ -152,7 +152,7 @@ class CourseController extends Controller
                 "courseContent" => 'required',
                 'courseImage' => 'required|mimes:png,jpg,jpeg,webp|file',
                 "difficulty" => 'required',
-                "assignment" => 'required| max:2',
+                "assignment" => 'required| max:2| gt:0',
             ];
         }else{
             $validationRules = [
@@ -161,7 +161,7 @@ class CourseController extends Controller
                 "courseContent" => 'required',
                 'courseImage' => 'mimes:png,jpg,jpeg,webp|file',
                 "difficulty" => 'required',
-                "assignment" => 'required| max:2',
+                "assignment" => 'required| max:2| gt:0',
             ];
         }
 

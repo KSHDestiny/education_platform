@@ -77,7 +77,7 @@
                 </div>
                 <div class="field">
                     <label for="assignment">Number of Assignment</label>
-                    <input type="number" name="assignment" class="form-control" value="{{ old('assignment',$course->assignment) }}" id="assignment" min="0" />
+                    <input type="number" name="assignment" class="form-control" value="{{ old('assignment',$course->assignment) }}" id="assignment" />
                     @error('assignment')
                         <p class="text-danger">{{ $message }}</p>
                     @enderror

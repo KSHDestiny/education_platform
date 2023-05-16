@@ -95,13 +95,13 @@ class StudentController extends Controller
         $validationRules = [
             'name' => 'required',
             'description' => 'required',
-            'age' => 'max:2',
+            'age' => 'max:2|gt:0',
             'gender' => 'required',
             'phone' => 'unique:users,phone,'.$request->id,
             'education' => 'required'
         ];
 
-        Validator::make($request->all(),$validationRules,['age.max' => "Your age must not exceed 99 years"])->validate();
+        Validator::make($request->all(),$validationRules,['age.max' => "Your age must not exceed 99 years",'age.gt' => "Age must be positive number."])->validate();
     }
 
     // password validation

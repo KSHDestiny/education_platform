@@ -54,7 +54,10 @@
                 </div>
                 <div class="field">
                     <label for="age">age</label>
-                    <input type="number" class="form-control rounded-0 opacity-50 p-2" name="age" value="{{old('age', $professor->age)}}" min="0" max="100" id="age" placeholder="Enter Your Age..." />
+                    <input type="number" class="form-control rounded-0 opacity-50 p-2" name="age" value="{{old('age', $professor->age)}}" id="age" placeholder="Enter Your Age..." />
+                    @error('age')
+                        <p class="text-danger">{{ $message }}</p>
+                    @enderror
                 </div>
                 <div class="field">
                     <label for="phone">Phone</label>
