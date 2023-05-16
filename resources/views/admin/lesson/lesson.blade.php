@@ -87,7 +87,7 @@
             {{ $lessons->appends(request()->query())->links() }}
             <ul class="actions d-flex justify-content-end h4 mt-3">
                 <div class="@if (Auth::user()->id != $course->professor_id) d-none @endif">
-                    <a href="{{ route('lesson#createPage',[$course->course_id, $course->professor_id]) }}" class="btn btn-outline-secondary text-black">Manage Your Course Lessons</a>
+                    <a href="{{ route('lesson#createPage',[$course->course_id]) }}" class="btn btn-outline-secondary text-black">Manage Your Course Lessons</a>
                 </div>
             </ul>
         </div>

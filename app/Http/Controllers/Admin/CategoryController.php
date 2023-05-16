@@ -63,7 +63,7 @@ class CategoryController extends Controller
         $user = Auth::user();
         $createProfessor = Category::select('professor_id')->where('category_id',$id)->first();
 
-        if($user->role != "founder" && $user->id != $createProfessor->professor_id){
+        if($user->id != $createProfessor->professor_id){
             abort(403);
         }
 

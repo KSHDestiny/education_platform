@@ -93,7 +93,7 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])-
             // lesson page
             Route::get('/{id}',[LessonController::class,'lessonPage'])->name('lesson#page');
             // lesson create page
-            Route::get('/createPage/{id}/{professorId}',[LessonController::class,'lessonCreatePage'])->name('lesson#createPage');
+            Route::get('/createPage/{id}',[LessonController::class,'lessonCreatePage'])->name('lesson#createPage');
             // lesson create
             Route::post('/create/{id}',[LessonController::class,'lessonCreate'])->name('lesson#create');
             // lesson change page

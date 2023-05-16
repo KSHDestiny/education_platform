@@ -26,9 +26,11 @@ class LessonController extends Controller
     }
 
     // direct create & edit lesson Page
-    public function lessonCreatePage($courseId, $professorId){
+    public function lessonCreatePage($courseId){
         $user = Auth::user();
-        if($user->id != $professorId){
+        $abortCourse = Course::select('professor_id')->where('course_id',$courseId)->first();
+
+        if($abortCourse->professor_id != $user->id){
             abort(403);
         }
 
