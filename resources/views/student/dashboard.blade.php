@@ -120,7 +120,8 @@
                                         }
                                     }
                                 @endphp
-                                <p>Rating -@if ($rating == true && $rate == "no rating")
+                                <p>Rating -
+                                @if ($rating == true && $rate == "no rating")
                                     <span class="text-muted"> no rating</span>
                                 @elseif ($rating == true && $rate != "no rating")
                                     @for ($i = 0; $i < 5; $i++)
